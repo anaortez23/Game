@@ -1,0 +1,16 @@
+body{
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+}
+#canvas{
+    border: 20px solid silver;
+}
+#myDIV{
+display:none;
+}
+
+/* .unhidden{
+    display:block;
+}
+} */ */
