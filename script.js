@@ -36,7 +36,7 @@ class Game{
     init() {
     this.canvas = document.getElementById("canvas");
     this.ctx = canvas.getContext("2d");
-    this.img.src = ("images/maze.png");
+    this.img.src = ("./images/maze.png");
     const interval = setInterval(() => {
     this.draw()
     this.win()
@@ -119,9 +119,9 @@ class Game{
     draw() {
     this.clear();
     let carrotImg = new Image();
-    carrotImg.src = ("images/carrotPrice1.png");
+    carrotImg.src = ("./images/carrotPrice1.png");
     this.ctx.drawImage(carrotImg, 390, 8, 50, 25);
-    this.bunnyImg.src = ("images/MazeBunny/frontRestBunny.png");
+    this.bunnyImg.src = ("./images/MazeBunny/frontRestBunny.png");
     this.ctx.drawImage(this.bunnyImg, 6.2, 5.5, 90, 40, this.x, this.y, 150, 60);
 
     }
