@@ -1,16 +1,83 @@
 body{
-    background-color: azure;
-    display: flex;
+    height: 20em;
+    /* background-color: azure; */
+    display: flex; 
     justify-content: center;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: 90em 52em;
+    
 }
 #canvas{
-    border: 20px solid silver;
+    border: 20px solid orange;
+    margin-top: 10%;
+/* background-color: white; */
+    background-color: rgba(255, 255, 255, 0.322);
 }
+h1{
+    padding-top: 10%;
+    font-family: fantasy;
+    color: orange;
+    font-size: 100px;
+    text-shadow: -8px 0 rgb(56, 12, 12), 0 1px rgb(56, 12, 12), 1px 0 rgb(56, 12, 12), 0 -5px rgb(56, 12, 12);
+}
+h2{
+    padding-top: 10%;
+    font-family: fantasy;
+    color: orange;
+    font-size: 100px;
+    text-shadow: -8px 0 rgb(56, 12, 12), 0 1px rgb(56, 12, 12), 1px 0 rgb(56, 12, 12), 0 -5px rgb(56, 12, 12);
+}
+#startMaze{
+    position: relative;
+    border-color: rgb(56, 12, 12);
+    margin-bottom: 20%;
+    margin-left: 28%;
+    margin-top: -5%; 
+    border-image-width: 40% black;
+    width: 35%;
+    height: 45%;
+}
+#startMaze:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border: transparent;
+}
+
+#startMaze img{
+    margin-top: -35%;
+    margin-left: -5%;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+}
+#startMaze button{
+    font-family: fantasy;
+    color: rgb(57, 233, 33);
+    text-shadow: -2px 0 rgb(56, 12, 12), 0 1px rgb(56, 12, 12), 1px 0 rgb(56, 12, 12), 0 -2px rgb(56, 12, 12);
+    font-weight: bolder;
+    border: transparent;
+    border-radius: 90%;
+    height: 50px;
+    background-color: rgb(245, 140, 3);
+    font-size: 39px;
+    position: relative;
+    margin: 14% 18%;
+}
+/* #startMaze text{
+    text-shadow: -2px 0 rgb(56, 12, 12), 0 1px rgb(56, 12, 12), 1px 0 rgb(56, 12, 12), 0 -2px rgb(56, 12, 12);
+} */
+
+
 #myDIV{
 display:none;
 }
+#mazeWin{
+display: none;
+}
+#mazeWin img{
 
+}
 /* .unhidden{
     display:block;
 }
-} */ */
+} */ 
