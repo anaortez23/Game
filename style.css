@@ -22,7 +22,7 @@ h1{
     text-shadow: -8px 0 rgb(56, 12, 12), 0 1px rgb(56, 12, 12), 1px 0 rgb(56, 12, 12), 0 -5px rgb(56, 12, 12);
 }
 h2{
-    padding-top: 10%;
+    padding-top: 7%;
     font-family: fantasy;
     color: orange;
     font-size: 100px;
@@ -75,7 +75,10 @@ display:none;
 display: none;
 }
 #mazeWin img{
-
+margin-top: -16%;
+margin-left: 38%;
+height: 23%;
+width: 23%;
 }
 /* .unhidden{
     display:block;

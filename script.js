@@ -4,14 +4,16 @@ class Game{
         this.ctx = undefined;
         this.dx = 15;
         this.dy = 15;
-        this.x = 400//235;
-        this.y = 40//5;
+        this.x = 235;
+        this.y = 5;
         this.WIDTH = 830;
         this.HEIGHT = 555;
         this.img = new Image();
         this.bunnyImg = new Image();
+        this.bunnyImg.src = ("./images/MazeBunny/frontRestBunny.png");
         this.collision = false;
-
+        this.carrotImg = new Image();
+        this.carrotImg.src = ("./images/carrotPrice1.png");
     }
     startMaze() {
     document.getElementById("myDIV").style.display = "block";
@@ -38,8 +40,8 @@ class Game{
     this.ctx = canvas.getContext("2d");
     this.img.src = ("./images/maze.png");
     const interval = setInterval(() => {
-    this.draw()
-    this.win()
+        this.draw()
+        this.win()
     }, 1000 / 60);
     }
     
@@ -49,7 +51,7 @@ class Game{
     switch (event.code) {
         case 'ArrowUp':
         case 'KeyW': /* Up arrow was pressed */
-            if (this.y - this.dy > 0 && !this.checkCollision(this.x + this.dx, this.y )){
+            if (this.y - this.dy > 0 && !this.checkCollision(this.x, this.y - this.dy - 5)){
                 this.y -= this.dy;
                 this.clear();
                 // this.checkCollision();
@@ -61,7 +63,7 @@ class Game{
         break;
         case 'ArrowDown':
         case 'KeyS':  /* Down arrow was pressed */
-            if (this.y + this.dy < this.HEIGHT && !this.checkCollision(this.x, this.y + this.dy)){
+            if (this.y + this.dy < this.HEIGHT && !this.checkCollision(this.x, this.y + this.dy + 10)){
                 this.y += this.dy;
                 this.clear();
                 console.log("arrowDown")
@@ -74,7 +76,7 @@ class Game{
         break;
         case 'ArrowLeft':
         case 'KeyA':  /* Left arrow was pressed */
-            if (this.x - this.dx > 0 && !this.checkCollision(this.x - this.dx, this.y)){
+            if (this.x - this.dx > 0 && !this.checkCollision(this.x - this.dx - 6, this.y)){
             this.x -= this.dx;
             this.clear();
         //     this.checkCollision();
@@ -103,14 +105,10 @@ class Game{
     checkCollision(x, y) {
         this.clear();
         let imgd = this.ctx.getImageData(x, y, 20, 20);
-        console.log(x, y)
         let pix = imgd.data;
-        // console.log(pix)
         for (let i = 3; i < pix.length; i += 4) {
             if (pix[i] > 0.7 ) { //&& pix[i+1] === 0 && pix[i+2] === 0) {
-            console.log(i);
             return true;
-            // console.log("yes black")
             }
         }
         return false;
@@ -118,18 +116,13 @@ class Game{
     
     draw() {
     this.clear();
-    let carrotImg = new Image();
-    carrotImg.src = ("./images/carrotPrice1.png");
-    this.ctx.drawImage(carrotImg, 390, 8, 50, 25);
-    this.bunnyImg.src = ("./images/MazeBunny/frontRestBunny.png");
+    this.ctx.drawImage(this.carrotImg, 390, 8, 50, 25);
     this.ctx.drawImage(this.bunnyImg, 6.2, 5.5, 90, 40, this.x, this.y, 150, 60);
 
     }
 
-    win(x, y) {
-        // console.log(this.x >= 390 , this.x < 410 , this.y <= 20 , this.y > 0)
+    win() {
         if (this.x > 390 && this.x < 410 && this.y <= 20 && this.y > 0){
-        // console.log("now")
         document.getElementById('myDIV').style.display = 'none';
         document.getElementById('mazeWin').style.display = "block";
     }
