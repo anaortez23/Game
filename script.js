@@ -4,8 +4,8 @@ class Game{
         this.ctx = undefined;
         this.dx = 15;
         this.dy = 15;
-        this.x = 235;
-        this.y = 5;
+        this.x = 400//235;
+        this.y = 45;
         this.WIDTH = 830;
         this.HEIGHT = 555;
         this.img = new Image();
@@ -18,6 +18,8 @@ class Game{
         this.collision = false;
         this.carrotImg = new Image();
         this.carrotImg.src = ("./images/carrotPrice.png");
+        // this.carrotImg.style.position = 'relative';
+        // this.bunnyImg.style.position = 'absolute';
         // this.spreadBunny = new Image();
         // this.spreadBunny.src = ("images/MazeBunny/bunnysheet5.png");
         // this.width = 25;
@@ -50,6 +52,7 @@ class Game{
         // if(this.isMovingDown === true){
             // this.bunnyDown.loop()
         // }
+        this.ctx.drawImage(this.carrotImg, 390, 8, 50, 25);
         this.ctx.drawImage(this.bunnyImg, 6.2, 5.5, 90, 40, this.x, this.y, 150, 60);
 
         // this.cxt.drawImage(this.spriteSheet,
@@ -79,7 +82,7 @@ class Game{
     clear() {
     this.ctx.clearRect(0, 0, this.WIDTH, this.HEIGHT);
     this.ctx.drawImage(this.img, -1, -1, this.WIDTH + 2, this.HEIGHT + 2);
-    this.ctx.drawImage(this.carrotImg, 390, 8, 50, 25);
+    // this.ctx.drawImage(this.carrotImg, 390, 8, 50, 25);
     }
     
     //load img
