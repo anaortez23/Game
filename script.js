@@ -4,7 +4,7 @@ class Game{
         this.ctx = undefined;
         this.dx = 15;
         this.dy = 15;
-        this.x = 400//235;
+        this.x = 235;
         this.y = 45;
         this.WIDTH = 830;
         this.HEIGHT = 555;
