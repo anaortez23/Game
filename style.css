@@ -39,16 +39,17 @@ h2{
     height: 45%;
 }
 #startMaze:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    border: transparent;
+    /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border: transparent; */
 }
 
 #startMaze img{
-    margin-top: -35%;
+    margin-top: -11%;
     margin-left: -5%;
-    height: 400px;
+    height: 200px;
     width: 400px;
     position: absolute;
+    transform: rotate(-0.8deg);
 }
 #startMaze button{
     font-family: fantasy;
@@ -57,30 +58,47 @@ h2{
     font-weight: bolder;
     border: transparent;
     border-radius: 90%;
-    height: 50px;
+    /* height: 50px; */
     background-color: rgb(245, 140, 3);
     font-size: 39px;
     position: relative;
-    margin: 14% 18%;
+    margin: 12% 21%;
 }
-/* #startMaze text{
-    text-shadow: -2px 0 rgb(56, 12, 12), 0 1px rgb(56, 12, 12), 1px 0 rgb(56, 12, 12), 0 -2px rgb(56, 12, 12);
-} */
+#startMaze button:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
+}
 
 
 #myDIV{
-display:none;
+    display:none;
 }
 #mazeWin{
-display: none;
+    display: none;
 }
 #mazeWin img{
-margin-top: -16%;
-margin-left: 30%;
-height: 23%;
-width: 23%;
+    margin-top: -16%;
+    margin-left: 30%;
+    height: 23%;
+    width: 23%;
 }
 /* .unhidden{
     display:block;
 }
-} */ 
+} */
+.clip {
+    clip-path: url(#clip);
+}
+
+.star-link {
+    position: absolute;
+    left: 125px;
+    background-color: blue;
+    min-height: 100px;
+    height: 100px;
+    width: 100px;
+    min-width: 100px;
+}
+
+.clip:hover {
+    opacity: 0.5;
+}
