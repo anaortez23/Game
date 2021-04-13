@@ -38,10 +38,10 @@ h2{
     width: 35%;
     height: 45%;
 }
-#startMaze:hover {
-    /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    border: transparent; */
-}
+/* #startMaze:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border: transparent;
+} */
 
 #startMaze img{
     margin-top: -11%;
@@ -64,13 +64,45 @@ h2{
     position: relative;
     margin: 12% 21%;
 }
-#startMaze button:hover{
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
+#startMaze button:focus{
+    outline: 0;
 }
 
 
-#myDIV{
+#myDIV {
     display:none;
+}
+#question-button {
+    position: absolute;
+    margin: 4vw 0 0 7.5vw;
+    background-color: #789504;
+    border: none;
+}
+#question-svg:hover {
+    background-color: #fda500;
+    border-radius: 4px;
+}
+#question-button:focus{
+    outline: 0;
+}
+/* #question-button:active{
+    color: black;
+} */
+#arrows {
+    display: none;
+    margin: -40vw 0 0 64vw;
+    position: absolute;
+}
+#arrow-up {
+    margin: 0 0 0vw 4.1vw;
+}
+#arrows h3 {
+    font-family: fantasy;
+    margin: 0 0 1vw -2vw;
+    text-align: center;
+    color: #fda500;
+    font-size: 1.5vw;
+    text-shadow: 0px 0 rgb(56 12 12), 0 1px rgb(56 12 12), 1px 0 rgb(56 12 12), 0 -2px rgb(56 12 12);
 }
 #mazeWin{
     display: none;

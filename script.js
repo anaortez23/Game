@@ -4,9 +4,10 @@ class Game {
         this.ctx = undefined;
         this.dx = 15;
         this.dy = 15;
-        this.x = 295;
-        // 235
-        this.y = 5;
+        this.x = 400;
+        // 235 400
+        this.y = 25;
+        //5 25
         this.WIDTH = 830;
         this.HEIGHT = 555;
         this.img = new Image();
@@ -24,7 +25,16 @@ class Game {
     startMaze() {
         document.getElementById("myDIV").style.display = "block";
         document.getElementById('welcomePage').style.display = 'none';
+        document.getElementById('mazeWin').style.display = "none";
         // document.getElementById('mazeWin').style.display = "none";
+    }
+    toggleInstructions() {
+        var x = document.getElementById("arrows");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
     }
     playAgain() {
         document.getElementById('mazeWin').style.display = "none";
