@@ -4,7 +4,8 @@ class Game {
         this.ctx = undefined;
         this.dx = 15;
         this.dy = 15;
-        this.x = 235;
+        this.x = 295;
+        // 235
         this.y = 5;
         this.WIDTH = 830;
         this.HEIGHT = 555;
@@ -23,6 +24,12 @@ class Game {
     startMaze() {
         document.getElementById("myDIV").style.display = "block";
         document.getElementById('welcomePage').style.display = 'none';
+        // document.getElementById('mazeWin').style.display = "none";
+    }
+    playAgain() {
+        document.getElementById('mazeWin').style.display = "none";
+        document.getElementById('myDIV').style.display = 'block';
+
     }
     clear() {
         this.ctx.clearRect(0, 0, this.WIDTH, this.HEIGHT);
