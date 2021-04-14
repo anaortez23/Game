@@ -7,7 +7,7 @@ class Game {
         this.x = 400;
         // 235 400
         this.y = 25;
-        //5 25
+        //5 25 
         this.WIDTH = 830;
         this.HEIGHT = 555;
         this.img = new Image();
