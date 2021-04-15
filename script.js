@@ -4,9 +4,9 @@ class Game {
         this.ctx = undefined;
         this.dx = 15;
         this.dy = 15;
-        this.x = 400;
+        this.x = 235;
         // 235 400
-        this.y = 25;
+        this.y = 5;
         //5 25 
         this.WIDTH = 830;
         this.HEIGHT = 555;
