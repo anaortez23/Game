@@ -59,7 +59,7 @@ class Game {
         document.addEventListener('keydown', event => {
             // console.log(this);
             switch (event.code) {
-                
+
                 case 'ArrowUp':
                 case 'KeyW': /* Up arrow was pressed */
                     if (this.y - this.dy > 0 && !this.checkCollision(this.x, this.y - this.dy - 5)) {
@@ -143,6 +143,8 @@ class Game {
     }
 
 }
+
+
 
 const myGame = new Game();
 myGame.init();
