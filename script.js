@@ -130,8 +130,6 @@ class Game {
     // this.ctx.drawImage(this.spreadBunny, width * 8.23, height * 1.2, width, height, this.x -10, this.y + 310, scaledWidth, scaledHeight);
     // this.ctx.drawImage(this.spreadBunny, width * 9.6, height * 1.2, width, height, this.x -10, this.y + 360, scaledWidth, scaledHeight);
     // this.ctx.drawImage(this.spreadBunny, width * 10.9, height * 1.2, width, height, this.x -10, this.y + 410, scaledWidth, scaledHeight);
-
-
     // }
 
     win() {
@@ -141,6 +139,7 @@ class Game {
         }
 
     }
+
 
 }
 
