@@ -1,3 +1,6 @@
+
+
+
 class Game {
     constructor() {
         this.canvas = undefined;
